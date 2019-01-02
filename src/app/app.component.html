@@ -1,0 +1,8 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+  <mat-sidenav mode="side" opened><app-side-nav></app-side-nav></mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
