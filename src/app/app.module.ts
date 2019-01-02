@@ -24,7 +24,7 @@ import { P5FlappyBirdComponent } from './p5-projects/p5-flappy-bird/p5-flappy-bi
     SideNavComponent,
     DashboardComponent,
     P5DashboardComponent,
-    P5FlappyBirdComponent,
+    P5FlappyBirdComponent
   ],
   imports: [
     BrowserModule,

@@ -11,16 +11,18 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
-          <a routerLink="/{{route.routerLink}}">
+          <a routerLink="./{{route.routerLink}}" routerLinkActive="active">
             <h3>{{route.title}}</h3>
           </a>
         </mat-panel-title>
       </mat-expansion-panel-header>
 
       <div *ngFor="let child of route.children">
-          <a routerLink="/{{route.routerLink}}/{{child.path}}" routerLinkActive="active">
+        <div *ngIf="child.path != ''">
+          <a routerLink="./{{route.routerLink}}/{{child.path}}" routerLinkActive="active">
             <h3>{{child.data.title}}</h3>
           </a>
+        </div>
       </div>
     </mat-expansion-panel>
   </ng-template>
