@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ethan Brugger\'s Project Page ';
-  shouldRun = true;
 }

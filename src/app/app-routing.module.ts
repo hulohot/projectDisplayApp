@@ -12,23 +12,29 @@ const routes: Routes = [
   },
   {
     path: 'p5-projects',
-    component: P5DashboardComponent,
     data: { title: 'P5 Projects' },
     children: [
-      { 
-        path: '', redirectTo: 'P5DashboardComponent', pathMatch: 'full' 
+      {
+        path: '',
+        component: P5DashboardComponent,
+        data: { title: 'P5 Projects' },
       },
-      { 
-        path: 'p5-flappy-bird', component: P5FlappyBirdComponent,
-        data: { title: 'Flappy Bird'}
-      },
+      {
+        path: 'flappy', component: P5FlappyBirdComponent,
+        data: { title: 'Flappy Bird' }
+      }
     ]
   },
-  { path: '',
+  {
+    path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
   },
-  // { path: '**', component: PageNotFoundComponent }
+  {
+    path: '**',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

@@ -1,8 +1,11 @@
 .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    height: 100%;
     background: #eee;
+    position: fixed;
+    right: 0px;
+    left: 0px;
   }
+
+.title-text {
+  margin-left: 10px;
+}
