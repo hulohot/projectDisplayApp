@@ -1,11 +1,12 @@
-
-
+<!-- Really wish I had more routes to work with so I would know what this is going to look like -->
 
 <div *ngFor="let route of sideRoutes">
   <div *ngIf="!route.hasChildren;else multiList">
-    <a routerLink="/{{route.routerLink}}">
-      <mat-card class="card">{{route.title}}</mat-card>
-    </a>
+    <mat-card>
+      <a routerLink="/{{route.routerLink}}">
+        <h3 class="card">{{route.title}}</h3>
+      </a>
+    </mat-card>
   </div>
   <ng-template #multiList>
     <mat-expansion-panel>
@@ -16,12 +17,14 @@
           </a>
         </mat-panel-title>
       </mat-expansion-panel-header>
+      <mat-divider></mat-divider>
 
       <div *ngFor="let child of route.children">
         <div *ngIf="child.path != ''">
           <a routerLink="./{{route.routerLink}}/{{child.path}}" routerLinkActive="active">
             <h3>{{child.data.title}}</h3>
           </a>
+          <mat-divider *ngIf="route.children.length > 2"></mat-divider>
         </div>
       </div>
     </mat-expansion-panel>

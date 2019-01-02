@@ -24,14 +24,7 @@ export class SideNavComponent implements OnInit {
       } else if (route.children) {
         let sideR: SideRoutes = { routerLink: route.path, title: route.data.title, hasChildren: true, children: route.children };
         this.sideRoutes.push(sideR);
-        // route.children.forEach(child => {
-        //   if (child.path != '') {
-        // let sideR: SideRoutes = {routerLink: route.path, title: route.data.title, hasChildren: true, children: newChildren};
-        // this.sideRoutes.push(sideR);
       }
-      // });
-      // let sideR: SideRoutes = {routerLink: route.path, title: route.data.title, hasChildren: true, children: newChildren};
-      // this.sideRoutes.push(sideR);
     });
   console.log(this.sideRoutes);
 }

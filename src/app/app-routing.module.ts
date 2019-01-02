@@ -22,7 +22,7 @@ const routes: Routes = [
       {
         path: 'flappy', component: P5FlappyBirdComponent,
         data: { title: 'Flappy Bird' }
-      },
+      }
     ]
   },
   {
